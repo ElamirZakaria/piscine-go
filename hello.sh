@@ -1,1 +1,1 @@
-echo "Hello egalal" 
+echo "Hello egalal!" 
