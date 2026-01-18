@@ -1,1 +1,1 @@
-ls -uptm
+ls -uptm |tr -d ' ' 
