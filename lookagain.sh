@@ -1,2 +1,2 @@
-find  -name "*.sh" | sort -r| sed s'#.sh##g' | sed 's#^\./##'
+find  -name "*.sh" | sort -r| sed s'#.sh##g' | sed 's#^\./##g' | sed 's#/##g'
 
