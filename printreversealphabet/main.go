@@ -4,14 +4,11 @@ import "github.com/01-edu/z01"
 
 func main() {
 	i := 'z'
-	for i != '\t' {
+	for i >= 'a' {
 
 		z01.PrintRune(i)
-
-		if i == 'a' {
-			i = '\v'
-		}
 		i--
 
 	}
+	z01.PrintRune('\n')
 }
