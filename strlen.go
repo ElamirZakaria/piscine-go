@@ -1,6 +1,6 @@
 package piscine
 
-func Strlen(s string) int {
+func StrLen(s string) int {
 	length := 0
 	for range s {
 		length++
