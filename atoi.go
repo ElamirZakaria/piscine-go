@@ -7,13 +7,14 @@ func Atoi(s string) int {
 	flag := 0
 	for i := 0; i < len(s); i++ {
 		if s[i] >= '0' && s[i] <= '9' {
+			flag++
 			temp = int(s[i] - '0')
 			result = result*10 + temp
 		} else if s[i] == ' ' {
 			continue
 		} else if s[i] == '-' {
 			flag++
-			if flag == 2 {
+			if flag > 1 {
 				result = 0
 				break
 			}
@@ -21,7 +22,7 @@ func Atoi(s string) int {
 
 		} else if s[i] == '+' {
 			flag++
-			if flag == 2 {
+			if flag > 1 {
 				result = 0
 				break
 			}
