@@ -4,8 +4,7 @@ func Atoi(s string) int {
 	var result int = 0
 	temp := 0
 	sign := 1
-	negative := 0
-	postive := 0
+	flag := 0
 	for i := 0; i < len(s); i++ {
 		if s[i] >= '0' && s[i] <= '9' {
 			temp = int(s[i] - '0')
@@ -13,19 +12,21 @@ func Atoi(s string) int {
 		} else if s[i] == ' ' {
 			continue
 		} else if s[i] == '-' {
-			negative++
+			flag++
+			if flag == 2 {
+				result = 0
+				break
+			}
 			sign = -1
-			if negative == 2 {
-				result = 0
-				break
-			}
+
 		} else if s[i] == '+' {
-			sign = 1
-			postive++
-			if postive == 2 {
+			flag++
+			if flag == 2 {
 				result = 0
 				break
 			}
+			sign = 1
+
 		} else {
 			result = 0
 			break
