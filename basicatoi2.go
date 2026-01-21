@@ -7,8 +7,11 @@ func BasicAtoi2(s string) int {
 		if s[i] >= '0' && s[i] <= '9' {
 			temp = int(s[i] - '0')
 			result = result*10 + temp
-		} else {
+		} else if s[i] == ' ' {
 			continue
+		} else {
+			result = 0
+			break
 		}
 	}
 	return result
