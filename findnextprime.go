@@ -1,11 +1,11 @@
 package piscine
 
 func FindNextPrime(nb int) int {
-	for {
-		if IsPrime(nb) == true {
+	for i := nb; i < 2147483647; i++ {
+		if IsPrime(i) == true {
 			return nb
 		} else {
-			nb++
 		}
 	}
+	return nb
 }
