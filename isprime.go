@@ -1,5 +1,7 @@
 package piscine
 
+import "fmt"
+
 func IsPrime(nb int) bool {
 	result := true
 	if nb == 2 || nb == 0 {
@@ -9,13 +11,12 @@ func IsPrime(nb int) bool {
 	}
 	for i := 2; i <= nb; i++ {
 		if nb%i == 0 {
-			// fmt.Println(nb)
-			// fmt.Println(i)
+			fmt.Println(i)
+			fmt.Println(nb)
 			result = false
 			break
 		} else {
 			result = true
-			break
 		}
 	}
 	return result
