@@ -8,9 +8,6 @@ func IsPrime(nb int) bool {
 		return false
 	}
 	for i := 2; i <= nb; i++ {
-		if i*i > nb {
-			break
-		}
 		if nb%i == 0 {
 			// fmt.Println(nb)
 			// fmt.Println(i)
@@ -20,7 +17,6 @@ func IsPrime(nb int) bool {
 			result = true
 			break
 		}
-
 	}
 	return result
 }
