@@ -8,7 +8,7 @@ func NRune(s string, n int) rune {
 	}
 	if n > length {
 		return 0
-	} else if n < 0 {
+	} else if n <= 0 {
 		return 0
 	} else {
 		return runes[n-1]
