@@ -17,6 +17,9 @@ func Index(s string, toFind string) int {
 		return -1
 	}
 	for i, a := range s {
+		if indexrunes >= lengths {
+			break
+		}
 		if a == runes[indexrunes] {
 			if flag == 0 {
 				firstOccurence = i
