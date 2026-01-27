@@ -7,9 +7,11 @@ import (
 )
 
 func main() {
-	arguments := os.Args
-	for _, a := range arguments[0] {
-		z01.PrintRune(a)
+	arguments := os.Args[0]
+	for _, a := range arguments {
+		if !(a == '.' || a == '/') {
+			z01.PrintRune(a)
+		}
 	}
 	z01.PrintRune('\n')
 }
