@@ -69,20 +69,23 @@ func NumToRune(numStr string) rune {
 func main() {
 	arguments := os.Args
 	temp := 0
-	if arguments[1] == "--upper" {
-		temp = 32
-	}
-	for i, a := range arguments {
-		if i == 0 {
-			continue
+	if len(arguments) == 1 {
+	} else {
+		if arguments[1] == "--upper" {
+			temp = 32
 		}
-		if i == 1 && temp == 32 {
-			continue
+		for i, a := range arguments {
+			if i == 0 {
+				continue
+			}
+			if i == 1 && temp == 32 {
+				continue
+			}
+			tobeprinted := NumToRune(a)
+
+			z01.PrintRune(tobeprinted - rune(temp))
+
 		}
-		tobeprinted := NumToRune(a)
-
-		z01.PrintRune(tobeprinted - rune(temp))
-
 	}
 	z01.PrintRune('\n')
 }
