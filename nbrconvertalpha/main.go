@@ -60,10 +60,9 @@ func NumToRune(numStr string) rune {
 		return 'y'
 	case "26":
 		return 'z'
-	case "56":
-		return ' '
+
 	default:
-		return '0' // invalid input
+		return ' ' // invalid input
 	}
 }
 
@@ -73,11 +72,17 @@ func main() {
 	if arguments[1] == "--upper" {
 		temp = 32
 	}
-	for _, a := range arguments {
-		tobeprinted := NumToRune(a)
-		if tobeprinted != '0' {
-			z01.PrintRune(tobeprinted - rune(temp))
+	for i, a := range arguments {
+		if i == 0 {
+			continue
 		}
+		if i == 1 && temp == 32 {
+			continue
+		}
+		tobeprinted := NumToRune(a)
+
+		z01.PrintRune(tobeprinted - rune(temp))
+
 	}
 	z01.PrintRune('\n')
 }
