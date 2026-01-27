@@ -11,8 +11,11 @@ func SplitWhiteSpaces(s string) []string {
 			flag = 0
 
 		} else {
-			str = str + string(a)
-			flag = 1
+			if a != ' ' {
+				str = str + string(a)
+
+				flag = 1
+			}
 		}
 	}
 	if str != "" {
