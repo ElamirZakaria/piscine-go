@@ -86,6 +86,6 @@ func main() {
 			z01.PrintRune(tobeprinted - rune(temp))
 
 		}
+		z01.PrintRune('\n')
 	}
-	z01.PrintRune('\n')
 }
