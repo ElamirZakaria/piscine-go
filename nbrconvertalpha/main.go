@@ -60,6 +60,8 @@ func NumToRune(numStr string) rune {
 		return 'y'
 	case "26":
 		return 'z'
+	case "56":
+		return ' '
 	default:
 		return '0' // invalid input
 	}
