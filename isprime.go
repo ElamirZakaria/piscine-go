@@ -7,8 +7,8 @@ func IsPrime(nb int) bool {
 	} else if nb == 2 {
 		return true
 	} else {
-		for i := 2; i <= nb; i++ {
-			if nb%i == 0 && i != nb {
+		for i := 2; i*i<= nb; i++ {
+			if nb%i == 0 {
 
 				result = false
 				break
