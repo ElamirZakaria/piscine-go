@@ -1,8 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -12,11 +13,16 @@ func main() {
 		for i := 1; i < len(args); i++ {
 			fileData, err := os.ReadFile(args[i])
 			if err != nil {
-				fmt.Println("Error:", err)
+				os.Stderr.WriteString("Error: " + err.Error() + "\n")
 				os.Exit(1)
+				// fmt.Println("Error:", err)
+				// os.Exit(1)
 			} else {
 				//	Data,err1 := os.ReadFile(args[1])
-				fmt.Print(string(fileData))
+				// fmt.Print(string(fileData))
+				for _, a := range string(fileData) {
+					z01.PrintRune(a)
+				}
 			}
 		}
 	}
