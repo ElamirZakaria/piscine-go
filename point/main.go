@@ -9,29 +9,30 @@ type point struct {
 	y int
 }
 
+// func PrintInt(a int) {
+// 	b := a/10 + '0'
+// 	c := a%10 + '0'
+// 	z01.PrintRune(rune(b))
+// 	z01.PrintRune(rune(c))
+// }
+
 func setPoint(ptr *point) {
 	ptr.x = 42
 	ptr.y = 21
 }
 
-func PrintInt(a int) {
-	b := a/10 + '0'
-	c := a%10 + '0'
-	z01.PrintRune(rune(b))
-	z01.PrintRune(rune(c))
-}
-
 func main() {
-	points := point{}
+	points := &point{}
 
-	setPoint(&points)
+	setPoint(points)
 	var s string = "x = ! , y = @"
 	// var s2 string = ""
 	for _, a := range s {
 		if a == '!' {
-			PrintInt(points.x)
+			var b rune = rune(points.x/10 + '0')
+			z01.PrintRune(b)
 		} else if a == '@' {
-			PrintInt(points.y)
+			z01.PrintRune('4')
 		} else {
 			z01.PrintRune(a)
 		}
