@@ -25,7 +25,7 @@ func main() {
 	points := &point{}
 
 	setPoint(points)
-	var s string = "x = ! , y = @"
+	var s string = "x = !, y = @"
 
 	for _, a := range s {
 		if a == '!' {
