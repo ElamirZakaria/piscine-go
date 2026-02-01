@@ -25,17 +25,24 @@ func main() {
 	points := &point{}
 
 	setPoint(points)
-	var s string = "x = ! , y = 21"
+	var s string = "x = ! , y = @"
 
 	for _, a := range s {
 		if a == '!' {
 			// These 2 calls print the digits of x
-			z01.PrintRune(points.x/10 + '0')
-			z01.PrintRune(points.x%10 + '0')
+			num := points.x/10 + '0'
+			for i := 0; i < 2; i++ {
+				z01.PrintRune(num)
+				num = points.x%10 + '0'
+			}
+
 		} else if a == '@' {
 			// These 2 calls print the digits of y
-			z01.PrintRune(points.y/10 + '0')
-			z01.PrintRune(points.y%10 + '0')
+			num := points.y/10 + '0'
+			for i := 0; i < 2; i++ {
+				z01.PrintRune(num)
+				num = points.y%10 + '0'
+			}
 		} else {
 			z01.PrintRune(a)
 		}
