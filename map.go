@@ -6,4 +6,5 @@ func Map(f func(int) bool, a []int) []bool {
 	for _, i := range a {
 		result = append(result, f(i))
 	}
+	return result
 }
