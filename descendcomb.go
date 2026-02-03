@@ -22,14 +22,17 @@ func DescendComb() {
 				z01.PrintRune(rune(a[i]/10) + '0')
 				z01.PrintRune(rune(a[i]%10) + '0')
 				z01.PrintRune(rune(' '))
+
 			}
 			if a[j] < 10 {
 				z01.PrintRune('0')
 				z01.PrintRune(rune(a[j]) + '0')
+				z01.PrintRune(rune(','))
 				z01.PrintRune(rune(' '))
 			} else {
 				z01.PrintRune(rune(a[j]/10) + '0')
 				z01.PrintRune(rune(a[j]%10) + '0')
+				z01.PrintRune(rune(','))
 				z01.PrintRune(rune(' '))
 			}
 
