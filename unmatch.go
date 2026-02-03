@@ -13,7 +13,7 @@ func Unmatch(a []int) int {
 		count[i]++
 	}
 	for j, i := range count {
-		if i == 1 {
+		if i%2 == 1 {
 			return j
 		}
 	}
