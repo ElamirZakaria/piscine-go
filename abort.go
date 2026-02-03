@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 func Abort(a, b, c, d, e int) int {
 	arr := [5]int{a, b, c, d, e}
 	for i := 0; i < 5; i++ {
@@ -13,6 +11,6 @@ func Abort(a, b, c, d, e int) int {
 			}
 		}
 	}
-	fmt.Println(arr)
+
 	return arr[2]
 }
