@@ -5,7 +5,7 @@ func LoafOfBread(str string) string {
 		return "\n"
 	}
 
-	if len(str) <= 5 {
+	if len(str) < 5 {
 		return "Invalid Output"
 	}
 
