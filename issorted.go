@@ -15,7 +15,11 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			}
 		}
 	} else if temp == 0 {
-		return false
+		for i := 1; i < len(a)-1; i++ {
+			if f(a[i], a[i+1]) != 0 {
+				return false
+			}
+		}
 	}
 	return true
 }
