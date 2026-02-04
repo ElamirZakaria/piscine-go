@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 func PodiumPosition(podium [][]string) [][]string {
 	for i := 0; i < len(podium); i++ {
 		for j := 0; j < len(podium)-i-1; j++ {
@@ -12,6 +10,6 @@ func PodiumPosition(podium [][]string) [][]string {
 			}
 		}
 	}
-	fmt.Println(podium[3][0])
+
 	return podium
 }
