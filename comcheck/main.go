@@ -11,6 +11,7 @@ func main() {
 	for _, a := range arguments {
 		if (a == "01") || (a == "galaxy") || (a == "galaxy 01") {
 			fmt.Println("Alert!!!")
+			break
 		}
 	}
 }
