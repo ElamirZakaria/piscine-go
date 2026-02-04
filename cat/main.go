@@ -10,7 +10,6 @@ import (
 func main() {
 	args := os.Args[1:]
 	if len(args) == 0 {
-		// No arguments? Check if there is piped data in Stdin
 		stat, _ := os.Stdin.Stat()
 		if (stat.Mode() & os.ModeCharDevice) == 0 {
 			// Data is being piped in!
