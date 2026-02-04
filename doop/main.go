@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -28,6 +27,30 @@ func stoi(s string) (int, bool) {
 	return a * sign, err
 }
 
+func itos(a int) string {
+	str := ""
+	if a < 0 {
+		str += string('-')
+		a = a * -1
+	}
+	if a == 0 {
+		return "0"
+	} else {
+		arrofintegers := []int{}
+
+		for a != 0 {
+			arrofintegers = append(arrofintegers, a%10)
+			a = a / 10
+		}
+
+		for i := 0; i < len(arrofintegers); i++ {
+			str += string(rune(arrofintegers[i] + '0'))
+		}
+	}
+
+	return str
+}
+
 func main() {
 	arguments := os.Args[1:]
 	if len(arguments) == 3 {
@@ -37,22 +60,22 @@ func main() {
 		if err1 == false || err2 == false {
 		} else {
 			if arguments[1] == "+" {
-				fmt.Println(firstNumber + secondNumber)
+				os.Stdout.WriteString(itos(firstNumber+secondNumber) + "\n")
 			} else if arguments[1] == "-" {
-				fmt.Println(firstNumber - secondNumber)
+				os.Stdout.WriteString(itos(firstNumber-secondNumber) + "\n")
 			} else if arguments[1] == "*" {
-				fmt.Println(firstNumber * secondNumber)
+				os.Stdout.WriteString(itos(firstNumber*secondNumber) + "\n")
 			} else if arguments[1] == "/" {
 				if secondNumber == 0 {
-					fmt.Println("No division by 0")
+					os.Stdout.WriteString("No division by 0" + "\n")
 				} else {
-					fmt.Println(firstNumber / secondNumber)
+					os.Stdout.WriteString(itos(firstNumber/secondNumber) + "\n")
 				}
 			} else if arguments[1] == "%" {
 				if secondNumber == 0 {
-					fmt.Println("No modulo by 0")
+					os.Stdout.WriteString("No modulo by 0" + "\n")
 				} else {
-					fmt.Println(firstNumber % secondNumber)
+					os.Stdout.WriteString(itos(firstNumber%secondNumber) + "\n")
 				}
 			}
 		}
