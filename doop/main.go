@@ -43,7 +43,7 @@ func itos(a int) string {
 			a = a / 10
 		}
 
-		for i := 0; i < len(arrofintegers); i++ {
+		for i := len(arrofintegers) - 1; i >= 0; i-- {
 			str += string(rune(arrofintegers[i] + '0'))
 		}
 	}
