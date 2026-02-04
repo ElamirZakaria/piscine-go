@@ -10,11 +10,7 @@ func Compare(a, b string) int {
 	for range b {
 		lengthb++
 	}
-	// if lengtha > lengthb {
-	// 	return -1
-	// } else if lengthb > lengtha {
-	// 	return 1
-	// } else {
+
 	for i := 0; i < lengtha && i < lengthb; i++ {
 		if a[i] == b[i] {
 			continue
