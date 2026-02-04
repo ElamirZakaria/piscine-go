@@ -1,8 +1,6 @@
 package piscine
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func DealAPackOfCards(deck []int) {
 	length := 0
@@ -43,5 +41,5 @@ func DealAPackOfCards(deck []int) {
 			fmt.Printf("%d,", deck[i])
 		}
 	}
-	fmt.Println()
+	fmt.Printf("\n")
 }
