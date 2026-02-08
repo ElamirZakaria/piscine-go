@@ -5,6 +5,7 @@ import "github.com/01-edu/z01"
 func main() {
 	PrintCombN(9)
 }
+
 func PrintCombN(n int) {
 	if n == 1 {
 		PrintComb1()
@@ -25,7 +26,6 @@ func PrintCombN(n int) {
 	} else if n == 9 {
 		PrintComb9()
 	}
-
 }
 
 func PrintComb1() {
@@ -66,7 +66,6 @@ func PrintComb3() {
 			}
 		}
 	}
-
 }
 
 func PrintComb4() {
@@ -83,11 +82,9 @@ func PrintComb4() {
 						z01.PrintRune(' ')
 					}
 				}
-
 			}
 		}
 	}
-
 }
 
 func PrintComb5() {
@@ -108,11 +105,9 @@ func PrintComb5() {
 						}
 					}
 				}
-
 			}
 		}
 	}
-
 }
 
 func PrintComb6() {
@@ -136,12 +131,11 @@ func PrintComb6() {
 						}
 					}
 				}
-
 			}
 		}
 	}
-
 }
+
 func PrintComb7() {
 	for i := '0'; i <= '3'; i++ {
 		for j := i + 1; j <= '4'; j++ {
@@ -165,12 +159,11 @@ func PrintComb7() {
 						}
 					}
 				}
-
 			}
 		}
 	}
-
 }
+
 func PrintComb8() {
 	for i := '0'; i <= '2'; i++ {
 		for j := i + 1; j <= '3'; j++ {
@@ -197,12 +190,11 @@ func PrintComb8() {
 						}
 					}
 				}
-
 			}
 		}
 	}
-
 }
+
 func PrintComb9() {
 	for i := '0'; i <= '1'; i++ {
 		for j := i + 1; j <= '2'; j++ {
@@ -232,9 +224,7 @@ func PrintComb9() {
 						}
 					}
 				}
-
 			}
 		}
 	}
-
 }
