@@ -1,7 +1,10 @@
-package piscine
+package main
 
 import "github.com/01-edu/z01"
 
+func main() {
+	PrintCombN(9)
+}
 func PrintCombN(n int) {
 	if n == 1 {
 		PrintComb1()
